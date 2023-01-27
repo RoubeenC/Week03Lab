@@ -15,6 +15,8 @@ import javax.servlet.http.HttpServletResponse;
  * @author Home
  */
 public class ArithmeticCalculatorServlet {
+    
+    
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         request.setAttribute("message", "---");
