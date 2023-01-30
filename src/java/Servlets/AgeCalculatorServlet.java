@@ -23,22 +23,28 @@ public class AgeCalculatorServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        //String age = request.getParameter("age");
         
         String message = "";
+        
         try {
+            
             String age = request.getParameter("age");
             if (age.equals("")) {
                 message = "You must give your current age";
-            } else {
+            } 
+            else {
+                
                 int temp = Integer.parseInt(age);
+                
                 if (temp > 0) {
                     message = "Your age next birthday will be " + (temp + 1);
                 } else {
                     message = "You must give your current age";
                 }
             }
-        } catch (Exception e) {
+            
+        } 
+        catch (Exception e) {
             message = "You must enter a number.";
         }
         
