@@ -29,11 +29,12 @@ public class AgeCalculatorServlet extends HttpServlet {
         try {
             
             String age = request.getParameter("age");
+            
             if (age.equals("")) {
                 message = "You must give your current age";
-            } 
+            }
+            
             else {
-                
                 int temp = Integer.parseInt(age);
                 
                 if (temp > 0) {
